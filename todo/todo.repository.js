@@ -3,9 +3,9 @@ const Todo = require('./todo');
 class TodoRepository {
     constructor() {
         this.Todos = [
-            new Todo(1, "Do HomeWork", false, false),
+            /*new Todo(1, "Do HomeWork", false, false),
             new Todo(2, "Go Shopping", false, false),
-            new Todo(3, "Pay Loan", false, false),
+            new Todo(3, "Pay Loan", false, false),*/
         ];
         this.lastId = this.Todos.length;
     }

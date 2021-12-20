@@ -5,7 +5,7 @@ services:
     #build: ./src
     image: sionyks/atdd-api
     ports:
-      - "8080:8080"
+      - "3002:3002"
     #volumes:
     #  - ./:/app
-    container_name: atdd-api
+    container_name: atdd-apiv2

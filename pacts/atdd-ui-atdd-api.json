@@ -1,9 +1,9 @@
 {
   "consumer": {
-    "name": "atdd-ui"
+    "name": "ui"
   },
   "provider": {
-    "name": "atdd-api"
+    "name": "api"
   },
   "interactions": [
     {
@@ -13,13 +13,9 @@
         "method": "GET",
         "path": "/todos",
         "headers": {
-          "Authorization": "Bearer 2021-01-14T11:34:18.045Z",
           "Content-Type": "application/json; charset=utf-8"
         },
         "matchingRules": {
-          "$.headers.Authorization": {
-            "match": "type"
-          },
           "$.headers.Content-Type": {
             "match": "type"
           }
@@ -31,114 +27,8 @@
           "Content-Type": "application/json; charset=utf-8"
         },
         "body": [
-          {
-            "id": 1,
-            "name": "Do HomeWork",
-            "completed": false
-          }
-        ],
-        "matchingRules": {
-          "$.body": {
-            "min": 1
-          },
-          "$.body[*].*": {
-            "match": "type"
-          }
-        }
-      }
-    },
-    {
-      "description": "get todo with ID 1",
-      "providerState": "todo with ID 1 exists",
-      "request": {
-        "method": "GET",
-        "path": "/todos/1",
-        "headers": {
-          "Authorization": "Bearer 2021-01-14T11:34:18.045Z",
-          "Content-Type": "application/json; charset=utf-8"
-        },
-        "matchingRules": {
-          "$.headers.Authorization": {
-            "match": "type"
-          },
-          "$.headers.Content-Type": {
-            "match": "type"
-          }
-        }
-      },
-      "response": {
-        "status": 200,
-        "headers": {
-          "Content-Type": "application/json; charset=utf-8"
-        },
-        "body": {
-          "id": 1,
-          "name": "Do HomeWork",
-          "completed": false
-        },
-        "matchingRules": {
-          "$.body": {
-            "match": "type"
-          }
-        }
-      }
-    },
-    {
-      "description": "delete todo with ID 1",
-      "providerState": "todo with ID 1 exists",
-      "request": {
-        "method": "DELETE",
-        "path": "/todos/1",
-        "headers": {
-          "Authorization": "Bearer 2021-01-14T11:34:18.045Z",
-          "Content-Type": "application/json; charset=utf-8"
-        },
-        "matchingRules": {
-          "$.headers.Authorization": {
-            "match": "type"
-          },
-          "$.headers.Content-Type": {
-            "match": "type"
-          }
-        }
-      },
-      "response": {
-        "status": 200,
-        "headers": {
-          "Content-Type": "application/json; charset=utf-8"
-        }
-      }
-    },
-    {
-      "description": "update todo with ID 1",
-      "providerState": "todo with ID 1 exists",
-      "request": {
-        "method": "PUT",
-        "path": "/todos/2",
-        "headers": {
-          "Authorization": "Bearer 2021-01-14T11:34:18.045Z",
-          "Content-Type": "application/json; charset=utf-8"
-        },
-        "body": {
-          "todo": {
-            "name": "newTodo",
-            "completed": false
-          }
-        },
-        "matchingRules": {
-          "$.headers.Authorization": {
-            "match": "type"
-          },
-          "$.headers.Content-Type": {
-            "match": "type"
-          }
-        }
-      },
-      "response": {
-        "status": 200,
-        "headers": {
-          "Content-Type": "application/json; charset=utf-8"
-        }
+
+        ]
       }
     },
     {
@@ -148,16 +38,12 @@
         "method": "POST",
         "path": "/todos",
         "headers": {
-          "Authorization": "Bearer 2021-01-14T11:34:18.045Z",
           "Content-Type": "application/json; charset=utf-8"
         },
         "body": {
           "name": "newTodo"
         },
         "matchingRules": {
-          "$.headers.Authorization": {
-            "match": "type"
-          },
           "$.headers.Content-Type": {
             "match": "type"
           }
