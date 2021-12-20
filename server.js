@@ -4,7 +4,7 @@ const routes = require('./todo/todo.routes');
 //const authMiddleware = require('./middleware/auth.middleware');
 const morgan = require('morgan');
 const bodyparser = require('body-parser');
-const port = 8080;
+const port = 3002;
 
 const init = () => {
     app.use(morgan('combined'));
