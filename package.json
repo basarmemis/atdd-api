@@ -1,0 +1,21 @@
+{
+  "name": "atdd-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "npx jest",
+    "test:pact": "npx jest --testTimeout 30000 --testMatch \"**/*.pact.test.js\""
+  },
+  "author": "bmemis",
+  "license": "MIT",
+  "dependencies": {
+    "@pact-foundation/pact": "^9.17.0",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.2",
+    "jest": "^27.4.5",
+    "morgan": "^1.10.0"
+  }
+}

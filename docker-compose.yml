@@ -1,0 +1,11 @@
+version: "3.8"
+services:
+  atdd-ui:
+    build: .
+    #build: ./src
+    image: sionyks/atdd-api
+    ports:
+      - "8080:8080"
+    #volumes:
+    #  - ./:/app
+    container_name: atdd-api
